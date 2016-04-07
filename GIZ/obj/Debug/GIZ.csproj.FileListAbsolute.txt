@@ -21,3 +21,4 @@ C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.Prope
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.csproj.GenerateResource.Cache
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.exe
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.pdb
+C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.csprojResolveAssemblyReference.cache

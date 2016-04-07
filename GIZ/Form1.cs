@@ -43,6 +43,20 @@ namespace GIZ
             mapBox1.Map.ZoomToExtents();
             mapBox1.Refresh();
             mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+
+            SharpMap.Layers.WmsLayer wmsL = new SharpMap.Layers.WmsLayer("US Cities", "http://sampleserver1.arcgisonline.com/ArcGIS/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/WMSServer");
+
+            //Força o uso de formato png, caso contrário não veríamos através dele.
+            wmsL.SetImageFormat("image/png");
+            //Força uso da versão 1.1.0
+            wmsL.Version = "1.1.0";
+            //Adiciona o layer chamado '2' no serviço (Cities)
+            wmsL.AddLayer("2");
+            //Define o SRID
+            wmsL.SRID = 4326;
+
+            //Adiciona o layer wmsL ao mapa
+            mapBox1.Map.Layers.Add(wmsL);
         }
 
         private void Form1_Load(object sender, EventArgs e)
