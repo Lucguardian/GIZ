@@ -35,8 +35,9 @@
             // 
             this.mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.None;
             this.mapBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.mapBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.mapBox1.FineZoomFactor = 10D;
-            this.mapBox1.Location = new System.Drawing.Point(281, 85);
+            this.mapBox1.Location = new System.Drawing.Point(127, 59);
             this.mapBox1.MapQueryMode = SharpMap.Forms.MapBox.MapQueryType.LayerByIndex;
             this.mapBox1.Name = "mapBox1";
             this.mapBox1.QueryGrowFactor = 5F;

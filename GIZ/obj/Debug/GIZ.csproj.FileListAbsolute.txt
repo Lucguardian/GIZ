@@ -16,7 +16,6 @@ C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\SharpMap.
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\SharpMap.UI.pdb
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\SharpMap.UI.xml
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.csprojResolveAssemblyReference.cache
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.Form1.resources
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.Properties.Resources.resources
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.csproj.GenerateResource.Cache
