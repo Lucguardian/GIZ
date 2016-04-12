@@ -22,3 +22,7 @@ C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.cspro
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.exe
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.pdb
 C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\obj\Debug\GIZ.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\gdalconst_csharp.dll
+C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\gdal_csharp.dll
+C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\ogr_csharp.dll
+C:\Users\Lucas\documents\visual studio 2015\Projects\GIZ\GIZ\bin\Debug\osr_csharp.dll
