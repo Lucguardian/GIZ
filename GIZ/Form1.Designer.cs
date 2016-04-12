@@ -35,6 +35,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnAddVector = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAddRaster = new System.Windows.Forms.ToolStripButton();
+            this.adicionarNovaCamadaVetorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarCamadaRasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +73,10 @@
             // 
             // arquivoToolStripMenuItem
             // 
+            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarCamadaRasterToolStripMenuItem,
+            this.adicionarNovaCamadaVetorialToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
@@ -92,7 +99,7 @@
             this.tsbtnAddVector.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAddVector.Name = "tsbtnAddVector";
             this.tsbtnAddVector.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnAddVector.Text = "toolStripButton1";
+            this.tsbtnAddVector.Text = "Adicionar Camada Vetorial";
             this.tsbtnAddVector.Click += new System.EventHandler(this.tsbtnAddVector_Click);
             // 
             // tsbtnAddRaster
@@ -102,8 +109,29 @@
             this.tsbtnAddRaster.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAddRaster.Name = "tsbtnAddRaster";
             this.tsbtnAddRaster.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnAddRaster.Text = "toolStripButton2";
+            this.tsbtnAddRaster.Text = "Adicionar Camada Raster";
             this.tsbtnAddRaster.Click += new System.EventHandler(this.tsbtnAddRaster_Click);
+            // 
+            // adicionarNovaCamadaVetorialToolStripMenuItem
+            // 
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.Name = "adicionarNovaCamadaVetorialToolStripMenuItem";
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.Text = "Adicionar Camada Vetorial";
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovaCamadaVetorialToolStripMenuItem_Click);
+            // 
+            // adicionarCamadaRasterToolStripMenuItem
+            // 
+            this.adicionarCamadaRasterToolStripMenuItem.Name = "adicionarCamadaRasterToolStripMenuItem";
+            this.adicionarCamadaRasterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.adicionarCamadaRasterToolStripMenuItem.Text = "Adicionar Camada Raster";
+            this.adicionarCamadaRasterToolStripMenuItem.Click += new System.EventHandler(this.adicionarCamadaRasterToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -136,6 +164,9 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbtnAddVector;
         private System.Windows.Forms.ToolStripButton tsbtnAddRaster;
+        private System.Windows.Forms.ToolStripMenuItem adicionarCamadaRasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adicionarNovaCamadaVetorialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
 

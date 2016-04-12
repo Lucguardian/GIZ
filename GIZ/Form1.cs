@@ -117,6 +117,56 @@ namespace GIZ
             }
         }
 
+        private void adicionarCamadaRasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "arquivos jpg (*.jpg)|*.jpg|arquivos tiff (*.tif)|*.tif|todos os arquivos (*.*)|*.*"; //define o tipo de arquivo q pode ser selecionado
+            openFileDialog1.FilterIndex = 2; //define qual das opções é padrão
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string x = openFileDialog1.FileName; //path inteiro do raster
+                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                SharpMap.Layers.GdiImageLayer rlay = new SharpMap.Layers.GdiImageLayer(x);
+                mapBox1.Map.Layers.Add(rlay);
+                mapBox1.Map.ZoomToExtents();
+                mapBox1.Refresh();
+                mapBox1.ActiveTool = MapBox.Tools.Pan;
+            }
+        }
+
+        private void adicionarNovaCamadaVetorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "arquivos shape (*.shp)|*.shp|Todos os arquivos (*.*)|*.*"; //define o tipo de arquivo q pode ser selecionado
+            openFileDialog1.FilterIndex = 1; //define qual das opções é padrão
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string x = openFileDialog1.FileName; //path inteiro do shape
+                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer(y);
+                vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(x, true);
+                mapBox1.Map.Layers.Add(vlay);
+                mapBox1.Map.ZoomToExtents();
+                mapBox1.Refresh();
+                mapBox1.ActiveTool = MapBox.Tools.Pan;
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Deseja encerrar o programa?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
         //protected override void OnLoad(EventArgs e)
         //{
         //    var pt = new CustomMapTool.PopupTool();
