@@ -167,6 +167,34 @@ namespace GIZ
             }
         }
 
+        private void tsbtnAddOSM_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("É necessária uma conexão com a internet. Deseja prosseguir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(
+                new BruTile.Web.OsmTileSource(), "OSM"));
+
+                mapBox1.Map.ZoomToExtents();
+                mapBox1.Refresh();
+                mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+            }
+        }
+
+        private void adicionarOprnStreetMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("É necessária uma conexão com a internet. Deseja prosseguir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(
+                new BruTile.Web.OsmTileSource(), "OSM"));
+
+                mapBox1.Map.ZoomToExtents();
+                mapBox1.Refresh();
+                mapBox1.ActiveTool = MapBox.Tools.Pan;
+            }
+        }
+
         //protected override void OnLoad(EventArgs e)
         //{
         //    var pt = new CustomMapTool.PopupTool();
