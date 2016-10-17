@@ -195,6 +195,32 @@ namespace GIZ
             }
         }
 
+        private void tsbtnMoveVis_Click(object sender, EventArgs e)
+        {
+            mapBox1.ActiveTool = MapBox.Tools.Pan;
+        }
+
+        private void tsbtnDefVis_Click(object sender, EventArgs e)
+        {
+            mapBox1.ActiveTool = MapBox.Tools.ZoomWindow;
+        }
+
+        private void tsbtnIncVis_Click(object sender, EventArgs e)
+        {
+            mapBox1.ActiveTool = MapBox.Tools.ZoomIn;
+        }
+
+        private void tsbtnDecVis_Click(object sender, EventArgs e)
+        {
+            mapBox1.ActiveTool = MapBox.Tools.ZoomOut;
+        }
+
+        private void tsbtnMaxVis_Click(object sender, EventArgs e)
+        {
+            mapBox1.Map.ZoomToExtents();
+            mapBox1.Refresh();
+        }
+
         //protected override void OnLoad(EventArgs e)
         //{
         //    var pt = new CustomMapTool.PopupTool();

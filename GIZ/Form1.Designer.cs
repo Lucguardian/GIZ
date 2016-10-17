@@ -34,12 +34,17 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarCamadaRasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovaCamadaVetorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarOprnStreetMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnAddVector = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAddRaster = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAddOSM = new System.Windows.Forms.ToolStripButton();
-            this.adicionarOprnStreetMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbtnMoveVis = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnDefVis = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnIncVis = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnDecVis = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnMaxVis = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,21 +92,28 @@
             // adicionarCamadaRasterToolStripMenuItem
             // 
             this.adicionarCamadaRasterToolStripMenuItem.Name = "adicionarCamadaRasterToolStripMenuItem";
-            this.adicionarCamadaRasterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.adicionarCamadaRasterToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.adicionarCamadaRasterToolStripMenuItem.Text = "Adicionar Camada Raster";
             this.adicionarCamadaRasterToolStripMenuItem.Click += new System.EventHandler(this.adicionarCamadaRasterToolStripMenuItem_Click);
             // 
             // adicionarNovaCamadaVetorialToolStripMenuItem
             // 
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Name = "adicionarNovaCamadaVetorialToolStripMenuItem";
-            this.adicionarNovaCamadaVetorialToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Text = "Adicionar Camada Vetorial";
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovaCamadaVetorialToolStripMenuItem_Click);
+            // 
+            // adicionarOprnStreetMapToolStripMenuItem
+            // 
+            this.adicionarOprnStreetMapToolStripMenuItem.Name = "adicionarOprnStreetMapToolStripMenuItem";
+            this.adicionarOprnStreetMapToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.adicionarOprnStreetMapToolStripMenuItem.Text = "Adicionar Open Street Map";
+            this.adicionarOprnStreetMapToolStripMenuItem.Click += new System.EventHandler(this.adicionarOprnStreetMapToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -110,7 +122,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnAddVector,
             this.tsbtnAddRaster,
-            this.tsbtnAddOSM});
+            this.tsbtnAddOSM,
+            this.tsbtnMoveVis,
+            this.tsbtnDefVis,
+            this.tsbtnIncVis,
+            this.tsbtnDecVis,
+            this.tsbtnMaxVis});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(889, 25);
@@ -147,12 +164,60 @@
             this.tsbtnAddOSM.Text = "Adicionar Open Street Map";
             this.tsbtnAddOSM.Click += new System.EventHandler(this.tsbtnAddOSM_Click);
             // 
-            // adicionarOprnStreetMapToolStripMenuItem
+            // tsbtnMoveVis
             // 
-            this.adicionarOprnStreetMapToolStripMenuItem.Name = "adicionarOprnStreetMapToolStripMenuItem";
-            this.adicionarOprnStreetMapToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.adicionarOprnStreetMapToolStripMenuItem.Text = "Adicionar Open Street Map";
-            this.adicionarOprnStreetMapToolStripMenuItem.Click += new System.EventHandler(this.adicionarOprnStreetMapToolStripMenuItem_Click);
+            this.tsbtnMoveVis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnMoveVis.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnMoveVis.Image")));
+            this.tsbtnMoveVis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnMoveVis.Name = "tsbtnMoveVis";
+            this.tsbtnMoveVis.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnMoveVis.Text = "toolStripButton1";
+            this.tsbtnMoveVis.ToolTipText = "Mover Visualização";
+            this.tsbtnMoveVis.Click += new System.EventHandler(this.tsbtnMoveVis_Click);
+            // 
+            // tsbtnDefVis
+            // 
+            this.tsbtnDefVis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDefVis.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDefVis.Image")));
+            this.tsbtnDefVis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDefVis.Name = "tsbtnDefVis";
+            this.tsbtnDefVis.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnDefVis.Text = "toolStripButton1";
+            this.tsbtnDefVis.ToolTipText = "Definir Visualização";
+            this.tsbtnDefVis.Click += new System.EventHandler(this.tsbtnDefVis_Click);
+            // 
+            // tsbtnIncVis
+            // 
+            this.tsbtnIncVis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnIncVis.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnIncVis.Image")));
+            this.tsbtnIncVis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnIncVis.Name = "tsbtnIncVis";
+            this.tsbtnIncVis.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnIncVis.Text = "toolStripButton1";
+            this.tsbtnIncVis.ToolTipText = "Aumentar Visualização";
+            this.tsbtnIncVis.Click += new System.EventHandler(this.tsbtnIncVis_Click);
+            // 
+            // tsbtnDecVis
+            // 
+            this.tsbtnDecVis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDecVis.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDecVis.Image")));
+            this.tsbtnDecVis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDecVis.Name = "tsbtnDecVis";
+            this.tsbtnDecVis.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnDecVis.Text = "toolStripButton1";
+            this.tsbtnDecVis.ToolTipText = "Diminuir Visualização";
+            this.tsbtnDecVis.Click += new System.EventHandler(this.tsbtnDecVis_Click);
+            // 
+            // tsbtnMaxVis
+            // 
+            this.tsbtnMaxVis.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnMaxVis.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnMaxVis.Image")));
+            this.tsbtnMaxVis.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnMaxVis.Name = "tsbtnMaxVis";
+            this.tsbtnMaxVis.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnMaxVis.Text = "toolStripButton1";
+            this.tsbtnMaxVis.ToolTipText = "Visualizar tudo";
+            this.tsbtnMaxVis.Click += new System.EventHandler(this.tsbtnMaxVis_Click);
             // 
             // Form1
             // 
@@ -190,6 +255,11 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsbtnAddOSM;
         private System.Windows.Forms.ToolStripMenuItem adicionarOprnStreetMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbtnMoveVis;
+        private System.Windows.Forms.ToolStripButton tsbtnDefVis;
+        private System.Windows.Forms.ToolStripButton tsbtnIncVis;
+        private System.Windows.Forms.ToolStripButton tsbtnDecVis;
+        private System.Windows.Forms.ToolStripButton tsbtnMaxVis;
     }
 }
 
