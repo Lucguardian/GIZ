@@ -94,6 +94,7 @@
             this.adicionarCamadaRasterToolStripMenuItem.Name = "adicionarCamadaRasterToolStripMenuItem";
             this.adicionarCamadaRasterToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.adicionarCamadaRasterToolStripMenuItem.Text = "Adicionar Camada Raster";
+            this.adicionarCamadaRasterToolStripMenuItem.ToolTipText = "Adiciona uma camada/mapa matricial à visualização atual";
             this.adicionarCamadaRasterToolStripMenuItem.Click += new System.EventHandler(this.adicionarCamadaRasterToolStripMenuItem_Click);
             // 
             // adicionarNovaCamadaVetorialToolStripMenuItem
@@ -101,6 +102,7 @@
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Name = "adicionarNovaCamadaVetorialToolStripMenuItem";
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Text = "Adicionar Camada Vetorial";
+            this.adicionarNovaCamadaVetorialToolStripMenuItem.ToolTipText = "Adiciona uma camada/mapa vetorial à visualização atual";
             this.adicionarNovaCamadaVetorialToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovaCamadaVetorialToolStripMenuItem_Click);
             // 
             // adicionarOprnStreetMapToolStripMenuItem
@@ -108,6 +110,7 @@
             this.adicionarOprnStreetMapToolStripMenuItem.Name = "adicionarOprnStreetMapToolStripMenuItem";
             this.adicionarOprnStreetMapToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.adicionarOprnStreetMapToolStripMenuItem.Text = "Adicionar Open Street Map";
+            this.adicionarOprnStreetMapToolStripMenuItem.ToolTipText = "Adiciona uma camada/mapa matricial disponível na internet, à visualização atual";
             this.adicionarOprnStreetMapToolStripMenuItem.Click += new System.EventHandler(this.adicionarOprnStreetMapToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
