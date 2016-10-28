@@ -86,14 +86,24 @@ namespace GIZ
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string x = openFileDialog1.FileName; //path inteiro do shape
-                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
-                SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer(y);
-                vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(x, true);
-                mapBox1.Map.Layers.Add(vlay);
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = MapBox.Tools.Pan;
+                try
+                {
+                    string x = openFileDialog1.FileName; //path inteiro do shape
+                    string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                    SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer(y);
+                    vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(x, true);
+                    mapBox1.Map.Layers.Add(vlay);
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = MapBox.Tools.Pan;
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                
             }
         }
 
@@ -107,13 +117,23 @@ namespace GIZ
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string x = openFileDialog1.FileName; //path inteiro do raster
-                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
-                SharpMap.Layers.GdiImageLayer rlay = new SharpMap.Layers.GdiImageLayer(x);
-                mapBox1.Map.Layers.Add(rlay);
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = MapBox.Tools.Pan;
+                try
+                {
+                    string x = openFileDialog1.FileName; //path inteiro do raster
+                    string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                    SharpMap.Layers.GdiImageLayer rlay = new SharpMap.Layers.GdiImageLayer(x);
+                    mapBox1.Map.Layers.Add(rlay);
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = MapBox.Tools.Pan;
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                
             }
         }
 
@@ -127,13 +147,22 @@ namespace GIZ
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string x = openFileDialog1.FileName; //path inteiro do raster
-                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
-                SharpMap.Layers.GdiImageLayer rlay = new SharpMap.Layers.GdiImageLayer(x);
-                mapBox1.Map.Layers.Add(rlay);
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = MapBox.Tools.Pan;
+                try
+                {
+                    string x = openFileDialog1.FileName; //path inteiro do raster
+                    string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                    SharpMap.Layers.GdiImageLayer rlay = new SharpMap.Layers.GdiImageLayer(x);
+                    mapBox1.Map.Layers.Add(rlay);
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = MapBox.Tools.Pan;
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
         }
 
@@ -147,14 +176,23 @@ namespace GIZ
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string x = openFileDialog1.FileName; //path inteiro do shape
-                string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
-                SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer(y);
-                vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(x, true);
-                mapBox1.Map.Layers.Add(vlay);
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = MapBox.Tools.Pan;
+                try
+                {
+                    string x = openFileDialog1.FileName; //path inteiro do shape
+                    string y = openFileDialog1.SafeFileName; //apenas nome e extensão do arquivo
+                    SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer(y);
+                    vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(x, true);
+                    mapBox1.Map.Layers.Add(vlay);
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = MapBox.Tools.Pan;
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
         }
 
@@ -172,12 +210,20 @@ namespace GIZ
             DialogResult result = MessageBox.Show("É necessária uma conexão com a internet. Deseja prosseguir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(
-                new BruTile.Web.OsmTileSource(), "OSM"));
+                try
+                {
+                    mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+                }
 
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                
             }
         }
 
@@ -186,12 +232,19 @@ namespace GIZ
             DialogResult result = MessageBox.Show("É necessária uma conexão com a internet. Deseja prosseguir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(
-                new BruTile.Web.OsmTileSource(), "OSM"));
+                try
+                {
+                    mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
+                    mapBox1.Map.ZoomToExtents();
+                    mapBox1.Refresh();
+                    mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+                }
 
-                mapBox1.Map.ZoomToExtents();
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = MapBox.Tools.Pan;
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível adicionar a camada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
         }
 
