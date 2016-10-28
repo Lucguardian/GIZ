@@ -270,8 +270,16 @@ namespace GIZ
 
         private void tsbtnMaxVis_Click(object sender, EventArgs e)
         {
-            mapBox1.Map.ZoomToExtents();
-            mapBox1.Refresh();
+            try
+            {
+                mapBox1.Map.ZoomToExtents();
+                mapBox1.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não é possível visualizar todas as camadas sem uma camada ativa.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         //protected override void OnLoad(EventArgs e)
